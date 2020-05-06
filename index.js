@@ -5,11 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-const courses = [
-  { id: 1, name: "course1" },
-  { id: 2, name: "course2" },
-  { id: 3, name: "course3" },
-];
+var courses = require("./courses.json");
 
 app.get("/", (req, res) => {
   res.send("Hello world");
